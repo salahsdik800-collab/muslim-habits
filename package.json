@@ -1,0 +1,15 @@
+{
+  "name": "muslim-habits",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:android": "npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/core": "latest",
+    "@capacitor/android": "latest"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "latest"
+  }
+}
