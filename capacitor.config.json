@@ -1,7 +1,7 @@
 {
   "appId": "com.muslimhabits.app",
   "appName": "عادات المسلم",
-  "webDir": ".",
+  "webDir": "www",
   "server": {
     "androidScheme": "https"
   }
