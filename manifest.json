@@ -1,0 +1,16 @@
+{
+  "name": "عادات المسلم",
+  "short_name": "عادات المسلم",
+  "description": "تطبيق بسيط لمتابعة العادات اليومية المفيدة للمسلم",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#031b18",
+  "theme_color": "#073d35",
+  "icons": [
+    {"src":"icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
+    {"src":"icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+  ]
+}
