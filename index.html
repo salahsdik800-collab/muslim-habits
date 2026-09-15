@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عادات المسلم</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Tahoma",sans-serif;background:#031b18;color:#f5f3e9}
+button{font:inherit;border:0;cursor:pointer}.app{min-height:100vh;max-width:1100px;margin:auto;background:linear-gradient(180deg,#063c34,#021713 55%,#01110f)}
+header{padding:28px 22px 18px;position:relative;overflow:hidden;background:linear-gradient(180deg,#073d35,#0a4b40)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px}.icon-btn{width:48px;height:48px;border-radius:50%;background:#0b302b;color:#f4c85b;font-size:22px}.date{background:#092d28;border:1px solid #126e5d;border-radius:22px;padding:10px 17px;text-align:center;font-size:14px}
+.brand{text-align:center;margin:8px 0 22px}.logo{font-size:44px;color:#f4c85b}.brand h1{margin:0;font-size:38px}.brand h1 span{color:#f4c85b}.brand p{margin:7px 0;color:#d7d8c8}
+.card{margin:14px 22px;padding:20px;border-radius:24px;background:rgba(2,39,34,.86);border:1px solid #0b705f;box-shadow:0 10px 30px #0003}
+.quote{display:flex;justify-content:space-between;align-items:center;gap:20px}.quote strong{color:#f4c85b;font-size:20px}.quote p{font-size:20px;line-height:1.8;margin:5px 0}
+.progress{display:grid;grid-template-columns:180px 1fr 170px;align-items:center;gap:25px}.circle{width:145px;height:145px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#43e0a4 0deg,#43e0a4 var(--deg),#17463e var(--deg));margin:auto}.circle:after{content:"";position:absolute;width:112px;height:112px;border-radius:50%;background:#062b25}.circle div{position:relative;text-align:center;font-size:30px;font-weight:bold}.circle small{display:block;font-size:13px;font-weight:normal}.streak{text-align:center;background:#0b4b3e;border-radius:22px;padding:18px}.streak b{display:block;font-size:34px;color:#f4c85b}.section-head{display:flex;justify-content:space-between;align-items:center;margin:25px 22px 10px}.section-head h2{margin:0;font-size:26px}.section-head button{background:none;color:#d8c278}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 22px}.habit{padding:18px 10px;min-height:155px;border-radius:22px;background:#07352f;border:1px solid #0b5b4e;text-align:center;transition:.2s}.habit.done{border-color:#3cda9f;background:linear-gradient(180deg,#084a3e,#06362f)}.habit:hover{transform:translateY(-2px)}.habit .emoji{font-size:34px}.habit h3{margin:10px 0 7px;font-size:17px}.status{font-size:13px;color:#43e0a4}.check{float:left;background:#43e0a4;color:#07352f;width:25px;height:25px;border-radius:50%;font-weight:bold}
+.dua{background:linear-gradient(90deg,#0c453b,#164d42);display:flex;justify-content:space-between;align-items:center}.dua p{margin:5px 0;font-size:17px}.add{position:fixed;bottom:72px;right:50%;transform:translateX(50%);width:62px;height:62px;border-radius:50%;background:#f4c85b;color:#06251f;font-size:36px;box-shadow:0 8px 25px #0008}
+nav{position:sticky;bottom:0;background:#021512eF;backdrop-filter:blur(12px);display:flex;justify-content:space-around;padding:10px 8px;border-top:1px solid #17463e}nav button{background:none;color:#aabbb6;font-size:12px;padding:5px 12px}nav button.active{color:#f4c85b}nav span{display:block;font-size:22px;margin-bottom:3px}
+.modal{position:fixed;inset:0;background:#0009;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modal.show{display:flex}.modal-box{width:min(450px,100%);background:#07352f;border:1px solid #17816d;border-radius:25px;padding:24px}.modal-box input{width:100%;padding:14px;border-radius:12px;border:1px solid #176b5a;background:#021c18;color:white;margin:12px 0}.modal-box .save{width:100%;padding:14px;border-radius:14px;background:#f4c85b;color:#06251f;font-weight:bold}.close{float:left;background:none;color:#ddd;font-size:24px}
+@media(max-width:750px){.progress{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.quote{display:block}.brand h1{font-size:31px}.card{margin:12px}.grid,.section-head{margin-left:12px;margin-right:12px}.grid{gap:10px}.habit{min-height:145px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+ <div class="top"><button class="icon-btn" onclick="alert('الإعدادات قريباً ⚙️')">⚙</button><div class="date">الثلاثاء<br><b id="date"></b></div></div>
+ <div class="brand"><div class="logo">☾</div><h1>عادات <span>المسلم</span></h1><p>خطوات صغيرة .. لحياة عظيمة</p></div>
+</header>
+
+<div class="card quote"><div><strong>ابدأ يومك بعادة صالحة 🌱</strong></div><div><small>قال تعالى:</small><p>﴿وَمَا جَعَلْنَا عَلَيْكُمْ فِي الدِّينِ مِنْ حَرَجٍ﴾</p></div></div>
+
+<div class="card progress">
+ <div class="circle" id="circle" style="--deg:0deg"><div><span id="count">0/8</span><small>عادات مكتملة</small></div></div>
+ <div><h2>الالتزام اليومي</h2><p>كل عادة صغيرة تصنع فرقاً كبيراً غداً.</p></div>
+ <div class="streak">🔥 أيام متتالية<b id="streak">0</b></div>
+</div>
+
+<div class="section-head"><h2>عادات اليوم</h2><button onclick="openModal()">＋ إضافة عادة</button></div>
+<div class="grid" id="habits"></div>
+
+<div class="card dua"><div>✨ <b>دعاء اليوم</b><p>اللهم أعني على ذكرك وشكرك وحسن عبادتك.</p></div><span>›</span></div>
+
+<button class="add" onclick="openModal()">＋</button>
+<nav><button class="active"><span>⌂</span>الرئيسية</button><button onclick="alert('الإحصائيات ستظهر هنا 📊')"><span>▥</span>الإحصائيات</button><button onclick="openModal()"><span>＋</span>إضافة</button><button onclick="alert('المكتبة قريباً 📖')"><span>▤</span>المكتبة</button><button onclick="alert('الملف الشخصي قريباً 👤')"><span>♙</span>الملف الشخصي</button></nav>
+</div>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">×</button><h2>إضافة عادة جديدة</h2><input id="newHabit" placeholder="مثال: صلاة الوتر"><button class="save" onclick="addHabit()">إضافة العادة</button></div></div>
+
+<script>
+const defaults=[
+ ["📖","قراءة القرآن"],["🕌","الصلاة في وقتها"],["📿","الأذكار"],["💧","شرب الماء"],
+ ["🏃","الرياضة"],["🍽️","الطعام الحلال"],["😴","النوم المبكر"],["📚","تعلم شيء نافع"]
+];
+let habits=JSON.parse(localStorage.getItem("muslimHabits")||"null")||defaults.map(x=>({name:x[1],emoji:x[0],done:false}));
+function save(){localStorage.setItem("muslimHabits",JSON.stringify(habits))}
+function render(){
+ const box=document.getElementById("habits");box.innerHTML="";
+ habits.forEach((h,i)=>{box.innerHTML+=`<button class="habit ${h.done?'done':''}" onclick="toggle(${i})"><div class="emoji">${h.emoji}</div><h3>${h.name}</h3><div class="status">${h.done?'تم الإنجاز':'لم يتم بعد'}</div>${h.done?'<div class="check">✓</div>':''}</button>`});
+ const done=habits.filter(h=>h.done).length,total=habits.length,p=total?Math.round(done/total*360):0;
+ document.getElementById("count").textContent=`${done}/${total}`;document.getElementById("circle").style.setProperty("--deg",p+"deg");
+}
+function toggle(i){habits[i].done=!habits[i].done;save();render();updateStreak()}
+function updateStreak(){let s=Number(localStorage.getItem("streak")||0);if(habits.length&&habits.every(h=>h.done)){s++;localStorage.setItem("streak",s)}document.getElementById("streak").textContent=s}
+function openModal(){document.getElementById("modal").classList.add("show");document.getElementById("newHabit").focus()}
+function closeModal(){document.getElementById("modal").classList.remove("show")}
+function addHabit(){let n=document.getElementById("newHabit").value.trim();if(!n)return;habits.push({name:n,emoji:"⭐",done:false});save();render();document.getElementById("newHabit").value="";closeModal()}
+document.getElementById("date").textContent=new Date().toLocaleDateString("ar-DZ",{year:"numeric",month:"2-digit",day:"2-digit"});
+render();updateStreak();
+</script>
+</body>
+</html>
