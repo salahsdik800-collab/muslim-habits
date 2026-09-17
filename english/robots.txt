@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://salahsdik800-collab.github.io/muslim-habits/sitemap.xml
